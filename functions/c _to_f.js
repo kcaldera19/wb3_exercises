@@ -1,7 +1,7 @@
 "use strict"
 function convertCtoF(temp){
- const celsius =temp;
- let fahrenheit =(celsius* 9/5)+32
+ const celsius = temp;
+ let fahrenheit = (celsius* 9/5)+32
  return fahrenheit;
 }
 console.log(convertCtoF(100));
