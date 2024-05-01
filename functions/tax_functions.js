@@ -42,9 +42,9 @@ function getFederalTax(grosspay,withholdingCode){
 
     const federalTax = (grosspay * taxRate)/100;
     
-    console.log(`gross pay$${grosspay} withholding code${withholdingCode} the ${taxRate} tax return`);
+    console.log(`gross pay $${grosspay} withholding code${withholdingCode} the ${taxRate} tax return`);
     return federalTax;
     
     
 }
-getFederalTax();
+getFederalTax(72000, 2);
