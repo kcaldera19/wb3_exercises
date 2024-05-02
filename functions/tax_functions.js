@@ -31,7 +31,8 @@ function getFederalTax(grosspay,withholdingCode){
     else if(withholdingCode === 2){
         taxRate = 19.5/100;
     
-    } else if(withholdingCode === 3){
+    } 
+    else if(withholdingCode === 3){
         taxRate = 18.5/100;
        
     }
@@ -40,11 +41,15 @@ function getFederalTax(grosspay,withholdingCode){
        
     }
 
-    const federalTax = (grosspay * taxRate)/100;
+    const federalTax = grosspay*taxRate;
+    console.log(`person 1 gross pay $${grosspay} withholding code${withholdingCode} the tax return ${federalTax}`);
     
-    console.log(`gross pay $${grosspay} withholding code${withholdingCode} the ${taxRate} tax return`);
     return federalTax;
     
     
+
 }
-getFederalTax(72000, 2);
+getFederalTax(750,0);
+getFederalTax(1550,2);
+getFederalTax(1100,6);
+
