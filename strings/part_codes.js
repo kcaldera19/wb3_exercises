@@ -1,6 +1,6 @@
 "use strict"
 
-
+// start
 function getSupplier(code){
     
 
@@ -10,23 +10,26 @@ function getSupplier(code){
     //find  position of first space
     let spacePosition = supplier.indexOf(":");
 
-    // get postion of first name starting at 0
-    supplier = supplier.substring(-0, spacePosition);
+    // get postion of supplier starting at 0
+    supplier = supplier.substring(0, spacePosition);
 
     return supplier;
 
 }
-
+// middle
 function getProductNumber(code){
     let productNumber = code;
-    
+    // end postion
     let spacePosition = productNumber.indexOf("-");
-    let position = productNumber.indexOf(":"+1);
+    // start postion
+    let position = productNumber.indexOf(":")+1;
+    // start and end 
     productNumber = productNumber.substring(position,spacePosition);
+
     return productNumber;
 
 }
-
+// end
 function getSized(code){
     let sizes= code
     let dash = sizes.lastIndexOf("-")
@@ -36,7 +39,7 @@ function getSized(code){
 
 }
 
-let code= "ACME:123-L";
+let code= "DI:12345-M";
 
 
 
