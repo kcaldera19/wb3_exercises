@@ -19,22 +19,29 @@ function parseAndDisplayName(name) {
 
     let fullName= name;
 
-    let spacePosition = fullNamename.indexOf(" ");
+    let spacePosition = fullName.indexOf(" ");
+    let firstName = " ";
 
     if(spacePosition !== -1){
-        onlyName = fullName.substring(0,spacePosition);
+        
+        firstName = fullName.substring(0,spacePosition);
+    }else{
+        firstName = fullName;
     }
 
-    let firstName =onlyName;
-    let middleName = "";
-    let lastSpacePostion = firstName.lastIndexOf("");
+   
+
+
+    let middleName =" ";
+    let lastSpacePostion = firstName.lastIndexOf(" ");
 
     if(spacePosition !== -1){
 
         middleName = fullName.substring(spacePosition+1).trim();
-        let  (lastSpacePostion !== -1){
-            middleName =middleName.substring(0,lastSpacePostion);
+        if (lastSpacePostion !== -1){
+            middleName = middleName.substring(0,lastSpacePostion);
         }
+       
     }
 
     let lastName= "";
@@ -45,7 +52,7 @@ function parseAndDisplayName(name) {
 
     console.log(`
         Name:${fullName}
-        Only Name:${onlyName}
+        Only Name:${fullName}
         First Name: ${firstName}
         middle Name: ${middleName}
         Last Name: ${lastName}
